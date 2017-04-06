@@ -96,7 +96,7 @@
                 </div>
               </div>
               <div class="level-right">
-                <a class="button is-info level-item">
+                <a class="button is-info level-item modal-button" data-target="#modal">
                   <span class="icon">
                     <i class="fa fa-plus-square"></i>
                   </span>
@@ -114,14 +114,15 @@
                 <div class="content">
                   <div>
                     <div>
-                      <strong>João Pereira da Silva</strong> / 
+                      <strong>João Pereira da Silva</strong> /
                       <a><strong>00121564 64657587-5646/54</strong></a>
+                      <span>(1ª Vara Trabalhista de Criciúma)</span>
                     </div>
                     <small>Richard F. Russo - 04/04/2017 15:43</small>
                     <p>Verificar a possibilidade de entrar com recurso por conta de novas provas.</p>
                     <span class="tag is-danger">
                       Recurso (10/04/2016)
-                      <button class="delete is-small"></button>
+                      <button class="delete is-small modal-button" data-target="#modal-message"></button>
                     </span>
                     <span class="tag is-info">
                       Entregar Documentos (20/04/2016)
@@ -361,6 +362,84 @@
       </div>
     </div>
   </section>
+  <div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <div class="field columns">
+          <div class="column">
+            <label class="label">Local / Vara</label>
+            <p class="control">
+              <span class="select">
+                <select>
+                  <option>1ª Criciúma</option>
+                  <option>2ª Criciúma</option>
+                  <option>3ª Criciúma</option>
+                  <option>4ª Criciúma</option>
+                  <option>Araranguá</option>
+                  <option>Içara</option>
+                </select>
+              </span>
+            </p>
+          </div>
+          <div class="column">
+            <label class="label">Advogado Responsável</label>
+            <p class="control">
+              <span class="select">
+                <select>
+                  <option>John Smith</option>
+                  <option>Richard J. Simpson</option>
+                  <option>Jeniffer S. Stalman</option>
+                </select>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Nome</label>
+          <p class="control">
+            <input class="input" type="text" placeholder="Nome do Cliente">
+          </p>
+        </div>
+        <div class="field">
+          <label class="label">Processo</label>
+          <p class="control">
+            <input class="input" type="text" placeholder="Número do Processo">
+          </p>
+        </div>
+        <div class="field">
+          <label class="label">Observações</label>
+          <p class="control">
+            <textarea class="textarea" placeholder="Observações sobre o prazo"></textarea>
+          </p>
+        </div>
+        <div class="block">
+          <p class="control">
+            <button class="button is-primary">Salvar</button>
+            <button class="button is-default">Cancelar</button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close"></button>
+  </div>
+  <div id="modal-message" class="modal is-small">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <section class="modal-card-body">
+        Deseja realmente baixar o prazo indicado?
+      </section>
+      <div class="modal-card-foot">
+        <a class="button is-primary">Baixar</a>
+        <a class="button is-info">Baixar com produção</a>
+        <a class="button is-dark">Cancelar</a>
+      </div>
+    </div>
+    <button class="modal-close"></button>
+  </div>
+  <script src="http://bulma.io/javascript/jquery-2.2.0.min.js"></script>
+  <script src="http://bulma.io/javascript/clipboard.min.js"></script>
+  <script src="http://bulma.io/javascript/bulma.js"></script>
 </body>
 
 </html>
